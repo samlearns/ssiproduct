@@ -1,0 +1,22 @@
+    [
+      {"productName":"Phone",
+      "code":"P1001",
+      "price":20.50,
+      "rating": 4.2,
+      "imageUrl":"./assets/images/phone.jfif"
+  },
+  {"productName":"Watch",
+  "code":"W1002",
+  "price":87.50,
+  "rating": 4.8,
+  "imageUrl":"./assets/images/watch.jfif"
+  },
+  {"productName":"Computer",
+  "code":"C1003",
+  "price":500,
+  "rating": 4.6,
+  "imageUrl":"./assets/images/laptop.jfif"
+  }
+  
+  
+    ]

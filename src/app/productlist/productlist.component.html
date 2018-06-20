@@ -1,0 +1,43 @@
+<div>
+    <h1>{{pageTitle}}</h1>
+</div>
+<div>
+    filter by: <input type = 'text' [(ngModel)]="listFilter">
+</div>
+<div>
+    <h2>Filtered by:{{listFilter}} </h2>
+</div>
+<table style="width:100%" *ngIf="products && products.length">
+    <thead>
+    <tr >
+            <th>
+                <button type = "button" (click) ='toggleImage()'> 
+                    {{showImage ? 'Hide':'Show'}} Image
+                    </button>
+            </th>
+      <th>Product Name</th>
+      <th>Code</th> 
+      <th>Price</th>
+      <th>Rating</th>
+      
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor ="let product of products | productFilter:listFilter">
+        <td>
+            <img *ngIf = "showImage"
+            [src]='product.imageUrl' height="75" width="75"
+            [title] ='product.productName'>
+
+    </td>
+
+<td>{{product.productName | uppercase}}</td>
+      <td>{{product.code | lowercase}}</td> 
+      <td>{{product.price | currency :  symbol-narrow}}</td>
+      <td><app-star [rating]="product.rating"></app-star></td>
+      
+    </tr>
+</tbody>
+
+
+     
